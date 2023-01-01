@@ -30,9 +30,11 @@ def main():
   time.sleep(2)
   driver.find_element(by="xpath", value="/html/body/nav/div/a").click()
   time.sleep(2)
+  element = driver.find_element(by="xpath", value="/html/body/div[1]/div/h1[2]").text
+  
   print(driver.current_url)
 
-  return None
+  return element.split(":")[-1]
 
 
 print(main())
